@@ -1,122 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Image Viewer</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f5f5f5;
-        }
-        
-        .container {
-            max-width: 800px;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        
-        h1 {
-            color: #333;
-        }
-        
-        .image-container {
-            margin: 20px 0;
-            overflow: hidden;
-            border-radius: 4px;
-        }
-        
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        .refresh-button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 10px 0;
-            cursor: pointer;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-        
-        .refresh-button:hover {
-            background-color: #45a049;
-        }
-        
-        .image-loading {
-            width: 100%;
-            height: 300px;
-            background-color: #eee;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #666;
-        }
-    </style>
+    <title>Cabana Valea Muntelui - Băișoara</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>Random Image Viewer</h1>
-        <div id="image-container" class="image-container">
-            <div class="image-loading">Loading image...</div>
+    <header>
+        <div class="hero">
+            <div class="carousel-container">
+                <div class="carousel" id="carousel">
+                    <!-- Images will be loaded dynamically -->
+                </div>
+                <button class="carousel-btn prev" id="prevBtn">&lt;</button>
+                <button class="carousel-btn next" id="nextBtn">&gt;</button>
+            </div>
+            <div class="hero-content">
+                <h1>Cabana Valea Muntelui</h1>
+                <p>Relaxare perfectă în inima munților din Băișoara</p>
+                <a href="#contact" class="cta-button">Rezervă acum</a>
+            </div>
         </div>
-        <button class="refresh-button" onclick="loadRandomImage()">Load Another Image</button>
-    </div>
+    </header>
 
-    <script>
-        // Image paths - replace these with paths to your actual images
-        const imagePaths = [
-            "/images/image1.jpg",
-            "/images/image2.jpg",
-            "/images/image3.jpg",
-            "/images/image4.jpg",
-            "/images/image5.jpg"
-        ];
-        
-        // Function to load a random image
-        function loadRandomImage() {
-            const imageContainer = document.getElementById('image-container');
-            imageContainer.innerHTML = '<div class="image-loading">Loading image...</div>';
-            
-            // Select a random image
-            const randomIndex = Math.floor(Math.random() * imagePaths.length);
-            const randomImagePath = imagePaths[randomIndex];
-            
-            // Create image element
-            const imgElement = new Image();
-            imgElement.onload = function() {
-                imageContainer.innerHTML = '';
-                imageContainer.appendChild(imgElement);
-            };
-            
-            imgElement.onerror = function() {
-                imageContainer.innerHTML = '<div class="image-loading">Failed to load image</div>';
-            };
-            
-            // Set the source to start loading
-            imgElement.src = randomImagePath;
-            imgElement.alt = "Random Image";
-        }
-        
-        // Load a random image when the page loads
-        window.onload = loadRandomImage;
-    </script>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-brand">Valea Muntelui</a>
+            <ul class="nav-menu">
+                <li><a href="#about">Despre noi</a></li>
+                <li><a href="#facilities">Facilități</a></li>
+                <li><a href="#location">Locația</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="about" class="section">
+            <div class="container">
+                <h2>Despre Cabana Valea Muntelui</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>Cabana Valea Muntelui vă oferă o experiență de neuitat în inima munților din Băișoara, situată la doar 16 km de pârtia de schi Băișoara. Este locul perfect pentru o vacanță relaxantă cu familia sau prietenii, indiferent de anotimp.</p>
+                        <p>Cu o capacitate de cazare generoasă și facilități moderne, cabana noastră combină perfect confortul cu farmecul rustic al muntelui.</p>
+                    </div>
+                    <div class="about-features">
+                        <div class="feature">
+                            <h3>4 Dormitoare</h3>
+                            <p>Fiecare cu baie proprie</p>
+                        </div>
+                        <div class="feature">
+                            <h3>Mansardă</h3>
+                            <p>Cu două canapele extensibile</p>
+                        </div>
+                        <div class="feature">
+                            <h3>Living Spațios</h3>
+                            <p>Cu masă pentru 12 persoane</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="facilities" class="section facilities-section">
+            <div class="container">
+                <h2>Facilități</h2>
+                <div class="facilities-grid">
+                    <div class="facility-card">
+                        <div class="facility-icon">🍳</div>
+                        <h3>Bucătărie Completă</h3>
+                        <p>Bucătărie complet mobilată cu frigider, aparat de cafea, plită și mașină de spălat vase</p>
+                    </div>
+                    <div class="facility-card">
+                        <div class="facility-icon">🏊‍♀️</div>
+                        <h3>Piscină Încălzită</h3>
+                        <p>Piscină exterioară încălzită pentru relaxare în orice anotimp</p>
+                    </div>
+                    <div class="facility-card">
+                        <div class="facility-icon">🔥</div>
+                        <h3>Loc de Grătar</h3>
+                        <p>Zonă de grătar cu plită exterioară și loc de luat masa</p>
+                    </div>
+                    <div class="facility-card">
+                        <div class="facility-icon">📶</div>
+                        <h3>WiFi Gratuit</h3>
+                        <p>Internet wireless de înaltă viteză în toată cabana</p>
+                    </div>
+                    <div class="facility-card">
+                        <div class="facility-icon">⛷️</div>
+                        <h3>Aproape de Pârtie</h3>
+                        <p>La doar 16 km de pârtia de schi din Băișoara</p>
+                    </div>
+                    <div class="facility-card">
+                        <div class="facility-icon">🛏️</div>
+                        <h3>Capacitate Mare</h3>
+                        <p>Poate găzdui confortabil până la 12 persoane</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="location" class="section">
+            <div class="container">
+                <h2>Locația</h2>
+                <div class="location-content">
+                    <div class="location-info">
+                        <h3>Băișoara, Cluj</h3>
+                        <p>Cabana Valea Muntelui este situată în frumoasa localitate Băișoara din județul Cluj, într-un cadru natural de vis, la doar 16 km de pârtia de schi.</p>
+                        <a href="https://www.google.com/maps/place/Cabana+Valea+Muntelui/@46.5748796,23.4065623,17z/data=!4m6!3m5!1s0x47493fd0052a8a25:0x7ed7fb4e5117a763!8m2!3d46.5748759!4d23.4091372!16s%2Fg%2F11xsrxd8pd?entry=ttu&g_ep=EgoyMDI1MDgyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="map-link">Vezi pe Google Maps</a>
+                    </div>
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2736.5234567890123!2d23.4065623!3d46.5748796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47493fd0052a8a25%3A0x7ed7fb4e5117a763!2sCabana%20Valea%20Muntelui!5e0!3m2!1sen!2sro!4v1693456789012!5m2!1sen!2sro" 
+                            width="100%" 
+                            height="400" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <h2>Contact</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Rezervări & Informații</h3>
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <a href="tel:0740150128">0740 150 128</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span>Băișoara, Cluj</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">⏰</span>
+                            <span>Program rezervări: 08:00 - 22:00</span>
+                        </div>
+                    </div>
+                    <div class="contact-cta">
+                        <h3>Gata să vă relaxați?</h3>
+                        <p>Contactați-ne pentru a face o rezervare sau pentru mai multe informații despre cabana noastră.</p>
+                        <a href="tel:0740150128" class="cta-button">Sună acum</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Cabana Valea Muntelui. Toate drepturile rezervate.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
