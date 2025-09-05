@@ -10,26 +10,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // Load images from the img directory
     async function loadImages() {
         try {
-            // Try to load a predefined list of common image extensions
-            const extensions = ['jpg', 'jpeg', 'png', 'webp', 'gif'];
-            const imagePromises = [];
+            // Define the specific renamed images
+            const imageFiles = [
+                'cabin_hero_01.png',
+                'mountain_view_02.png',
+                'interior_cozy_03.png',
+                'outdoor_space_04.png',
+                'winter_scene_05.png'
+            ];
             
-            // Try to load images with common naming patterns
-            for (let i = 1; i <= 20; i++) {
-                for (const ext of extensions) {
-                    imagePromises.push(checkImageExists(`img/${i}.${ext}`));
-                    imagePromises.push(checkImageExists(`img/image${i}.${ext}`));
-                    imagePromises.push(checkImageExists(`img/cabana${i}.${ext}`));
-                }
-            }
-            
-            // Also try some common names
-            const commonNames = ['exterior', 'interior', 'piscina', 'bucatarie', 'dormitor', 'living', 'gratar', 'iarna', 'vara', 'mansarda'];
-            for (const name of commonNames) {
-                for (const ext of extensions) {
-                    imagePromises.push(checkImageExists(`img/${name}.${ext}`));
-                }
-            }
+            const imagePromises = imageFiles.map(filename => 
+                checkImageExists(`img/${filename}`)
+            );
             
             const results = await Promise.allSettled(imagePromises);
             images = results
