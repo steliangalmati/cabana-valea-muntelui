@@ -6,6 +6,7 @@
     <title>Cabana Valea Muntelui - Băișoara</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -18,21 +19,22 @@
                 <button class="carousel-btn next" id="nextBtn">&gt;</button>
             </div>
             <div class="hero-content">
-                <h1>Cabana Valea Muntelui</h1>
-                <p>Relaxare perfectă în inima munților din Băișoara</p>
-                <a href="#contact" class="cta-button">Rezervă acum</a>
+                <h1 data-translate="heroTitle">Cabana Valea Muntelui</h1>
+                <p data-translate="heroSubtitle">Relaxare perfectă în inima munților din Băișoara</p>
+                <a href="#contact" class="cta-button" data-translate="reserveNow">Rezervă acum</a>
             </div>
         </div>
     </header>
 
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#home" class="nav-brand">Valea Muntelui</a>
+            <a href="#home" class="nav-brand" data-translate="heroTitle">Valea Muntelui</a>
             <ul class="nav-menu">
-                <li><a href="#about">Despre noi</a></li>
-                <li><a href="#facilities">Facilități</a></li>
-                <li><a href="#location">Locația</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about" data-translate="navAbout">Despre noi</a></li>
+                <li><a href="#facilities" data-translate="navFacilities">Facilități</a></li>
+                <li><a href="#location" data-translate="navLocation">Locația</a></li>
+                <li><a href="#contact" data-translate="navContact">Contact</a></li>
+                <li><button class="language-toggle" data-lang="en">EN</button></li>
             </ul>
         </div>
     </nav>
@@ -40,24 +42,24 @@
     <main>
         <section id="about" class="section">
             <div class="container">
-                <h2>Despre Cabana Valea Muntelui</h2>
+                <h2 data-translate="aboutTitle">Despre Cabana Valea Muntelui</h2>
                 <div class="about-grid">
                     <div class="about-text">
-                        <p>Cabana Valea Muntelui vă oferă o experiență de neuitat în inima munților din Băișoara, situată la doar 16 km de pârtia de schi Băișoara. Este locul perfect pentru o vacanță relaxantă cu familia sau prietenii, indiferent de anotimp.</p>
-                        <p>Cu o capacitate de cazare generoasă și facilități moderne, cabana noastră combină perfect confortul cu farmecul rustic al muntelui.</p>
+                        <p data-translate="aboutText1">Cabana Valea Muntelui vă oferă o experiență de neuitat în inima munților din Băișoara, situată la doar 16 km de pârtia de schi Băișoara si la doar 35 km de Cluj-Napoca. Este locul perfect pentru o vacanță relaxantă cu familia sau prietenii, indiferent de anotimp.</p>
+                        <p data-translate="aboutText2">Cu o capacitate de cazare generoaasă și facilități moderne, cabana noastră combină perfect confortul cu farmecul rustic al muntelui.</p>
                     </div>
                     <div class="about-features">
                         <div class="feature">
-                            <h3>4 Dormitoare</h3>
-                            <p>Fiecare cu baie proprie</p>
+                            <h3 data-translate="feature1Title">4 Dormitoare</h3>
+                            <p data-translate="feature1Desc">Fiecare cu baie proprie</p>
                         </div>
                         <div class="feature">
-                            <h3>Mansardă</h3>
-                            <p>Cu două canapele extensibile</p>
+                            <h3 data-translate="feature2Title">Mansardă</h3>
+                            <p data-translate="feature2Desc">Cu două canapele extensibile</p>
                         </div>
                         <div class="feature">
-                            <h3>Living Spațios</h3>
-                            <p>Cu masă pentru 12 persoane</p>
+                            <h3 data-translate="feature3Title">Living Spațios</h3>
+                            <p data-translate="feature3Desc">Cu masă pentru 12 persoane</p>
                         </div>
                     </div>
                 </div>
@@ -66,37 +68,42 @@
 
         <section id="facilities" class="section facilities-section">
             <div class="container">
-                <h2>Facilități</h2>
+                <h2 data-translate="facilitiesTitle">Facilități</h2>
                 <div class="facilities-grid">
                     <div class="facility-card">
                         <div class="facility-icon">🍳</div>
-                        <h3>Bucătărie Completă</h3>
-                        <p>Bucătărie complet mobilată cu frigider, aparat de cafea, plită și mașină de spălat vase</p>
+                        <h3 data-translate="facility1Title">Bucătărie Completă</h3>
+                        <p data-translate="facility1Desc">Bucătărie complet mobilată cu frigider, aparat de cafea, plită și mașină de spălat vase</p>
                     </div>
                     <div class="facility-card">
                         <div class="facility-icon">🏊‍♀️</div>
-                        <h3>Piscină Încălzită</h3>
-                        <p>Piscină exterioară încălzită pentru relaxare în orice anotimp</p>
+                        <h3 data-translate="facility2Title">Piscină Încălzită</h3>
+                        <p data-translate="facility2Desc">Piscină exterioară încălzită pentru relaxare în orice anotimp</p>
                     </div>
                     <div class="facility-card">
                         <div class="facility-icon">🔥</div>
-                        <h3>Loc de Grătar</h3>
-                        <p>Zonă de grătar cu plită exterioară și loc de luat masa</p>
+                        <h3 data-translate="facility3Title">Loc de Grătar</h3>
+                        <p data-translate="facility3Desc">Zonă de grătar cu plită exterioară, chiuvetă și loc de luat masa</p>
                     </div>
                     <div class="facility-card">
                         <div class="facility-icon">📶</div>
-                        <h3>WiFi Gratuit</h3>
-                        <p>Internet wireless de înaltă viteză în toată cabana</p>
+                        <h3 data-translate="facility4Title">WiFi Gratuit</h3>
+                        <p data-translate="facility4Desc">Internet wireless de înaltă viteză în toată cabana (Starlink)</p>
                     </div>
                     <div class="facility-card">
                         <div class="facility-icon">⛷️</div>
-                        <h3>Aproape de Pârtie</h3>
-                        <p>La doar 16 km de pârtia de schi din Băișoara</p>
+                        <h3 data-translate="facility5Title">Aproape de Pârtie</h3>
+                        <p data-translate="facility5Desc">La doar 16 km de pârtia de schi din Băișoara</p>
                     </div>
                     <div class="facility-card">
                         <div class="facility-icon">🛏️</div>
-                        <h3>Capacitate Mare</h3>
-                        <p>Poate găzdui confortabil până la 12 persoane</p>
+                        <h3 data-translate="facility6Title">Capacitate Mare</h3>
+                        <p data-translate="facility6Desc">Poate găzdui confortabil până la 12 persoane</p>
+                    </div>
+                    <div class="facility-card">
+                        <div class="facility-icon">🏞️</div>
+                        <h3 data-translate="facility7Title">Pe malul raului</h3>
+                        <p data-translate="facility7Desc">Acces direct la râul Ierța</p>
                     </div>
                 </div>
             </div>
@@ -104,12 +111,12 @@
 
         <section id="location" class="section">
             <div class="container">
-                <h2>Locația</h2>
+                <h2 data-translate="locationTitle">Locația</h2>
                 <div class="location-content">
                     <div class="location-info">
-                        <h3>Băișoara, Cluj</h3>
-                        <p>Cabana Valea Muntelui este situată în frumoasa localitate Băișoara din județul Cluj, într-un cadru natural de vis, la doar 16 km de pârtia de schi.</p>
-                        <a href="https://www.google.com/maps/place/Cabana+Valea+Muntelui/@46.5748796,23.4065623,17z/data=!4m6!3m5!1s0x47493fd0052a8a25:0x7ed7fb4e5117a763!8m2!3d46.5748759!4d23.4091372!16s%2Fg%2F11xsrxd8pd?entry=ttu&g_ep=EgoyMDI1MDgyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="map-link">Vezi pe Google Maps</a>
+                        <h3 data-translate="locationSubtitle">Băișoara 309D, Cluj</h3>
+                        <p data-translate="locationText">Cabana Valea Muntelui este situată în imediata proximitate a localități Băișoara din județul Cluj, într-un cadru natural de vis, la doar 16 km de pârtia de schi.</p>
+                        <a href="https://www.google.com/maps/place/Cabana+Valea+Muntelui/@46.5748796,23.4065623,17z/data=!4m6!3m5!1s0x47493fd0052a8a25:0x7ed7fb4e5117a763!8m2!3d46.5748759!4d23.4091372!16s%2Fg%2F11xsrxd8pd?entry=ttu&g_ep=EgoyMDI1MDgyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="map-link" data-translate="viewOnMaps">Vezi pe Google Maps</a>
                     </div>
                     <div class="map-container">
                         <iframe 
@@ -128,13 +135,13 @@
 
         <section id="contact" class="section contact-section">
             <div class="container">
-                <h2>Contact</h2>
+                <h2 data-translate="contactTitle">Contact</h2>
                 <div class="contact-content">
                     <div class="contact-info">
-                        <h3>Rezervări & Informații</h3>
+                        <h3 data-translate="contactSubtitle">Rezervări & Informații</h3>
                         <div class="contact-item">
-                            <span class="contact-icon">📞</span>
-                            <a href="tel:0740150128">0740 150 128</a>
+                            <span class="contact-icon"><i class="fab fa-whatsapp"></i></span>
+                            <a href="https://wa.me/40740150128">0740 150 128</a>
                         </div>
                         <div class="contact-item">
                             <span class="contact-icon">📍</span>
@@ -142,13 +149,21 @@
                         </div>
                         <div class="contact-item">
                             <span class="contact-icon">⏰</span>
-                            <span>Program rezervări: 08:00 - 22:00</span>
+                            <span data-translate="contactHours">Program rezervări: 08:00 - 22:00</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon"><i class="fab fa-facebook"></i></span>
+                            <a href="https://www.facebook.com/cabanavaleamunteluibaisoara" target="_blank" rel="noopener">Facebook</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon"><i class="fab fa-instagram"></i></span>
+                            <a href="https://www.instagram.com/valeamunteluibaisoara/" target="_blank" rel="noopener">Instagram</a>
                         </div>
                     </div>
                     <div class="contact-cta">
-                        <h3>Gata să vă relaxați?</h3>
-                        <p>Contactați-ne pentru a face o rezervare sau pentru mai multe informații despre cabana noastră.</p>
-                        <a href="tel:0740150128" class="cta-button">Sună acum</a>
+                        <h3 data-translate="contactCTATitle">Gata să vă relaxați?</h3>
+                        <p data-translate="contactCTAText">Contactați-ne pentru a face o rezervare sau pentru mai multe informații despre cabana noastră.</p>
+                        <a href="tel:0740150128" class="cta-button" data-translate="callNow">Sună acum</a>
                     </div>
                 </div>
             </div>
